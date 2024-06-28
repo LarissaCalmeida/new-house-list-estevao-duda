@@ -1,0 +1,88 @@
+.container {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+}
+
+.wrapper p {
+  font-family: Inter;
+  color: #536f5d;
+  font-weight: 800;
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+
+.wrapper span {
+  font-family: Inter;
+  color: #536f5d;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 1rem;
+  display: block;
+}
+
+.wrapper li {
+  font-family: Inter;
+  color: #536f5d;
+  font-size: 14px;
+  margin-top: 1rem;
+  /* display: block; */
+  font-weight: 600;
+  accent-color: #536f5d;
+  list-style-position: inside;
+}
+
+.wrapper .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.buttons button:last-child {
+  width: 150px;
+  height: 42px;
+  border-radius: 8px;
+  padding: 0 1rem;
+
+  background-color: #536f5d;
+  color: #fff;
+
+  cursor: pointer;
+
+  align-self: center;
+  font-family: Inter;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.buttons button:first-child {
+  width: 150px;
+  height: 42px;
+  border-radius: 8px;
+  padding: 0 1rem;
+  border: 1px solid #536f5d;
+  color: #536f5d;
+
+  cursor: pointer;
+  background-color: transparent;
+
+  align-self: center;
+  font-family: Inter;
+  font-weight: 600;
+  text-transform: uppercase;
+}

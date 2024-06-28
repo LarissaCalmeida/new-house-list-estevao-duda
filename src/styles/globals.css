@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+
+  text-decoration: none;
+  /* list-style: none; */
+  font-family: "Inter";
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

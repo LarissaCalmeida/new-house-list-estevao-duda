@@ -1,0 +1,202 @@
+.main {
+  width: 100%;
+}
+
+.main header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  flex-direction: column;
+  background: url("/background_list.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+.main header span {
+  font-weight: 800;
+}
+
+.main header p {
+  font-size: 18px;
+  color: #536f5d;
+  font-weight: 400;
+  margin-top: 2rem;
+}
+
+.main header h2 {
+  font-size: 90px;
+  font-family: "Great Vibes";
+  color: #536f5d;
+  font-weight: 300;
+}
+
+.main header h1 {
+  font-family: "Inter";
+  font-size: 42px;
+  color: #536f5d;
+  font-weight: 800;
+}
+
+@media (max-width: 600px) {
+  .main header p {
+    font-size: 16px;
+  }
+
+  .main header h2 {
+    font-size: 45px;
+  }
+
+  .main header h1 {
+    font-size: 20px;
+  }
+
+  .main section .filter span {
+    font-size: 25px;
+    text-align: center;
+  }
+}
+
+.main header button {
+  width: 300px;
+  height: 42px;
+  border-radius: 8px;
+  padding: 0 1rem;
+  margin-top: 1rem;
+  color: #536f5d;
+  /* color: #fff; */
+  background-color: transparent;
+  border: 1px solid #536f5d;
+  margin-bottom: 3rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.main header img {
+  position: absolute;
+  bottom: 2rem;
+  transform: rotate(90deg);
+}
+
+.typingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+}
+
+.main section {
+  min-height: 100vh;
+  background-image: url("/background_list_down.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2rem;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.main section input {
+  accent-color: #536f5d;
+}
+
+.main section input:disabled {
+  accent-color: #d2d2d2;
+}
+
+.main section .filter .left {
+  transform: rotate(90deg);
+  width: 32px;
+  cursor: pointer;
+}
+
+.main section .filter .right {
+  transform: rotate(270deg);
+  width: 32px;
+  cursor: pointer;
+}
+
+.main section .filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.main section .filter div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.main section .filter span {
+  font-family: "Great Vibes";
+  font-size: 50px;
+  /* text-transform: uppercase; */
+  padding: 0.5rem 4rem;
+  /* border: 2px solid #536f5d; */
+  /* border-radius: 8px; */
+  color: #536f5d;
+  /* font-weight: 600; */
+}
+
+.checkbox {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 3rem;
+}
+
+.checkbox div {
+  display: flex;
+  gap: 12px;
+}
+
+.checkbox label {
+  font-family: "Inter";
+  font-size: 16px;
+  color: #536f5d;
+  font-weight: 600;
+}
+
+.checkbox label span {
+  font-family: "Great Vibes";
+  font-size: 24px;
+  color: #536f5d;
+  font-weight: 400;
+}
+
+.main section > button {
+  width: 250px;
+  height: 42px;
+  border-radius: 8px;
+  padding: 0 1rem;
+  margin-top: 1rem;
+  background-color: #536f5d;
+  color: #fff;
+  margin-bottom: 3rem;
+  cursor: pointer;
+
+  position: absolute;
+  bottom: 2rem;
+  margin: 0 auto;
+
+  display: block;
+  align-self: center;
+  font-family: Inter;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.main section > button:disabled {
+  background-color: #797979;
+}
