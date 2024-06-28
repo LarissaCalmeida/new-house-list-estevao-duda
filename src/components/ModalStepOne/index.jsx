@@ -8,7 +8,7 @@ export const ModalStepOne = (props) => {
             <p>Tem certeza que deseja assinar
                  os itens abaixo?</p>
 
-            <ul>{props.items.map((value, index) => <li key={index}>{value}</li>)}</ul>
+            <ul>{props.items.map((value, index) => <li key={index}>{value.value}</li>)}</ul>
 
             <span>Obs.: Após assinado a ação só pode ser desfeita pelos noivos</span>
 

@@ -576,23 +576,7 @@ export default function List() {
           <div className={styles.filter}>
             <div>
             <span>Lista de chá de casa nova</span>
-              {/* <img
-                src="/down-arrow.png"
-                alt=""
-                className={styles.left}
-                onClick={() => {
-                  backFilter();
-                }}
-              />
-              <span>{filter[currentIndex]}</span>
-              <img
-                src="/down-arrow.png"
-                alt=""
-                className={styles.right}
-                onClick={() => {
-                  nextFilter();
-                }}
-              /> */}
+
             </div>
           </div>
 
@@ -602,19 +586,19 @@ export default function List() {
               return <><div key={index}>
                 <input
                   type="checkbox"
-                  id={value.value}
+                  id={`${value.value}-${index}`}
                   name="list"
                   value={value.value}
                   disabled={value.checked}
-                  checked={value.checked || selectedName.includes(value.value)}
+                  checked={value.checked || selectedName.includes(value.id)}
                   onChange={(e) => { 
                     console.log(selected)
-                    if(selectedName.includes(value.value)){
-                      const _idx = selectedName.indexOf(value.value);
+                    if(selectedName.includes(value.id)){
+                      const _idx = selectedName.indexOf(value.id);
                       selectedName.splice(_idx, 1);
                       selected.splice(_idx, 1);
                     } else {
-                      selectedName.push(value.value);
+                      selectedName.push(value.id);
                       selected.push(value);
 
                       setSelected([...selected])
@@ -622,7 +606,7 @@ export default function List() {
                     }
                   }}
                 />
-                <label for={value.value}>{value.value} - <span>{selectedName.includes(value.value) ? currentName : value.nameChecked}</span></label>
+                <label for={value.value}>{value.value} - <span>{selectedName.includes(value.id) ? currentName : value.nameChecked}</span></label>
               </div></>
             })}
           </div>
@@ -634,7 +618,9 @@ export default function List() {
             }
           }}>Assinar</button>
 
-         { openModalStepOne &&  <ModalStepOne items={selectedName} setOpen={setOpenModalStepOne} onSubmit={onSubmit} />}
+          <span className={styles.footer}>Criado por <a href="https://portfolio-larissa-carvalhos-projects.vercel.app/">lari.code</a> com 💜 e bastante ☕</span>
+
+         { openModalStepOne &&  <ModalStepOne items={selected} setOpen={setOpenModalStepOne} onSubmit={onSubmit} />}
         </section>
       </main>
     </>
