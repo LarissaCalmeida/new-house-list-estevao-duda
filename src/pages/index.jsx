@@ -8,7 +8,7 @@ export default function Home() {
   const router = useRouter();
 
   const onSubmit = () => {
-    localStorage.setItem("name", name);
+    window.localStorage.setItem("name", name);
     router.push("/list");
   };
 

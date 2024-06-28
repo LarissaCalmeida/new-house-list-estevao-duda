@@ -44,7 +44,7 @@ export default function List() {
   const [selectedName, setSelectedName] = useState([])
 
   useEffect(() => {
-    const value = localStorage.getItem("name")
+    const value = window.localStorage.getItem("name")
 
     if(value) setCurrentName(value)
   } , [])
