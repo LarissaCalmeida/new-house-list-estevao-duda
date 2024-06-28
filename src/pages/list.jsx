@@ -33,13 +33,21 @@ export default function List() {
     loop: true,
   });
 
-  const currentName = localStorage ? localStorage.getItem("name") : ""
+  // const currentName = localStorage ?  : ""
 
   const [openModalStepOne, setOpenModalStepOne] = useState(false)
+
+  const [currentName, setCurrentName] = useState("")
 
   const [dataFiltered, setDataFiltered] = useState([]);
   const [selected, setSelected] = useState([]);
   const [selectedName, setSelectedName] = useState([])
+
+  useEffect(() => {
+    const value = localStorage.getItem("name")
+
+    if(value) setCurrentName(value)
+  } , [])
 
   const dataList = [
     {
